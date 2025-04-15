@@ -54,31 +54,5 @@ const App=()=>{
 }
 
 
-/* function App() {
-const handleLogout = () => {
-    localStorage.removeItem('token');
-    window.location.href = '/login';
-}
 
-  return (
-    <Router>
-      <div>
-        <h1>Task Manager</h1>
-        
-        <nav>
-        <Link to="/">Tasks</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">signup</Link>
-          <Button onClick={handleLogout}>Logout</Button>          
-        </nav>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<Tasks />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
- */
 export default App;

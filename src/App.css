@@ -69,7 +69,34 @@ display: flex;
 }
 /*tasks*/
 .task-form{
+  gap: 15px;
   display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.update-form button{
+  background-color: #5940c1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+  margin:20px auto !important;
+}
+.task-form input{
+  width: 25%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.task-form button{
+  background-color: #5940c1;
+  color: white;
+  border: none;
+  padding: 10px;
+  height: 25px;
+  margin-top: 30px;
+  border-radius: 5px;
 }
 /*Login*/
 .winky-sans-login-header,.winky-snas-list-item{
@@ -83,7 +110,7 @@ display: flex;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  border-radius: 10px;
+  border-radius: 5px;
   width: 25%;
   background-color: #dbdbf9;
   padding: 50px;
@@ -98,12 +125,38 @@ display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-
-.loginForm button,.signupForm button,ul button,.task-form button{
+.tasks-container h2{
+margin-bottom: 10px;
+  text-align: center;
+ font-family: "montserrat" ,sans-serif;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: italic; 
+}
+.loginForm button,.signupForm button,ul button{
   background-color: #5940c1 !important;
   width: 50%;
-  margin:0 auto;
+  margin: 0 auto;
 }
-.loginForm button:hover,.signupForm button:hover,ul button:hover{
+td button{
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+}
+.editBTN{
+  background-color: rgb(0, 124, 0) !important;
+}
+.deleteBTN{
+background-color: rgb(177, 0, 0) !important;
+}
+.loginForm button:hover,.signupForm button:hover,ul button:hover,.task-form button:hover{
 background-color: #422f8d !important;
+}
+table{
+  border-radius: 5px;
+margin: 50px auto;
+  width: 80% !important; 
 }
