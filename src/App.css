@@ -148,6 +148,7 @@ td button{
 }
 .editBTN{
   background-color: rgb(0, 124, 0) !important;
+  margin-right: 10px !important;
 }
 .deleteBTN{
 background-color: rgb(177, 0, 0) !important;

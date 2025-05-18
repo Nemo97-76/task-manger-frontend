@@ -171,26 +171,23 @@ alert("Failed to fetch task")
   <tr>
           <th style={{width:"5%"}}>title</th>
           <th style={{ width:'10%'}}>description</th>
-          <th style={{width:"25%"}}>created By</th>
           <th>completed</th>
           <th>due date</th>
           <th>created At</th>
-          <th style={{width:"20%"}}>actions</th>
+          <th style={{width:"210px"}}>actions</th>
         </tr> 
          </thead>
 
          <tbody>
 {tasks.length > 0 ? (
             tasks.map((task) => (
-              <tr key={task._id}>
+              <tr style={task.completed?{backgroundColor:"rgba(0, 124, 0, 0.336)"}:{backgroundColor:"transparent"}} key={task._id}>
                 <td>{task.title}</td>
                 <td>{task.description || 'N/A'}</td>
-                <td>{task.createdBy}</td>
                 <td>{!(task.completed)?"false":"true"}</td>
 <td>{task.dueDate ? new Date(task.dueDate).toLocaleDateString() : 'N/A'}</td>
                 <td>{new Date(task.createdAt).toLocaleDateString()}</td>
-                <td style={{ display: 'flex', gap: '10px' }}>
-          
+                <td >
                  <Button className='editBTN' endDecorator={<EditRoundedIcon/>} onClick={()=>handleEditClick(task._id)}>edit</Button>
                  <Modal open={open}  onClose={() => setOpen(false)}>
                   <ModalDialog variant='soft' sx={{bgcolor:"#dbdbf9"}}>
