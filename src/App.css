@@ -262,8 +262,117 @@ ul button:hover,
   background-color: #422f8d !important;
 }
 
-table {
+table,
+.tasks-table {
   border-radius: 5px;
   margin: 50px auto;
   width: 80% !important;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.tasks-table th,
+.tasks-table td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.tasks-table th:nth-child(1),
+.tasks-table td:nth-child(1) {
+  width: 14%;
+}
+
+.tasks-table th:nth-child(2),
+.tasks-table td:nth-child(2) {
+  width: 28%;
+}
+
+.tasks-table th:nth-child(3),
+.tasks-table td:nth-child(3) {
+  width: 10%;
+}
+
+.tasks-table th:nth-child(4),
+.tasks-table td:nth-child(4),
+.tasks-table th:nth-child(5),
+.tasks-table td:nth-child(5) {
+  width: 14%;
+}
+
+.tasks-table th:nth-child(6),
+.tasks-table td:nth-child(6) {
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .tasks-table {
+    width: calc(100% - 32px) !important;
+    margin: 24px 16px;
+  }
+
+  .tasks-table thead {
+    display: none;
+  }
+
+  .tasks-table tbody tr {
+    display: block;
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .tasks-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: right;
+  }
+
+  .tasks-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    text-align: left;
+    flex-shrink: 0;
+    max-width: 40%;
+  }
+
+  .tasks-table td:last-child {
+    border-bottom: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tasks-table td:last-child::before {
+    margin-bottom: 8px;
+    max-width: none;
+  }
+
+  .tasks-table td[colspan] {
+    display: block;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .tasks-table td[colspan]::before {
+    content: none;
+  }
+
+  .tasks-table td button {
+    width: 100%;
+    margin: 4px 0 !important;
+  }
+
+  .editBTN {
+    margin-right: 0 !important;
+  }
 }

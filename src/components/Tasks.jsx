@@ -189,19 +189,21 @@ const Tasks = () => {
         </form>
 
       <Table
+        className="tasks-table"
         stickyHeader
         borderAxis="both"
         arial-label="basic table"
         hoverRow={true}
+        noWrap={false}
       >
         <thead>
           <tr>
-            <th style={{ width: "5%" }}>title</th>
-            <th style={{ width: "10%" }}>description</th>
+            <th>title</th>
+            <th>description</th>
             <th>completed</th>
             <th>due date</th>
             <th>created At</th>
-            <th style={{ width: "210px" }}>actions</th>
+            <th>actions</th>
           </tr>
         </thead>
 
@@ -216,16 +218,16 @@ const Tasks = () => {
                 }
                 key={task._id}
               >
-                <td>{task.title}</td>
-                <td>{task.description || "N/A"}</td>
-                <td>{!task.completed ? "false" : "true"}</td>
-                <td>
+                <td data-label="title">{task.title}</td>
+                <td data-label="description">{task.description || "N/A"}</td>
+                <td data-label="completed">{!task.completed ? "false" : "true"}</td>
+                <td data-label="due date">
                   {task.dueDate
                     ? new Date(task.dueDate).toLocaleDateString()
                     : "N/A"}
                 </td>
-                <td>{new Date(task.createdAt).toLocaleDateString()}</td>
-                <td>
+                <td data-label="created At">{new Date(task.createdAt).toLocaleDateString()}</td>
+                <td data-label="actions">
                   <Button
                     className="editBTN"
                     endDecorator={<EditRoundedIcon />}
