@@ -183,10 +183,10 @@ const Tasks = () => {
             required
           />
         </FormControl>
-        <Button type="submit" endDecorator={<AddRoundedIcon />}>
+        <Button type="submit" endDecorator={<AddRoundedIcon />} sx={{marginTop: "25px"}}>
           Add Task
         </Button>
-      </form>
+        </form>
 
       <Table
         stickyHeader

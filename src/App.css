@@ -1,144 +1,243 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 
-h1{
+h1 {
   text-align: center;
-  margin:50px 0;
+  margin: 50px 0;
 
 }
 
-.montserrat-header{
- text-align: center;
- margin: 50px 0;
- font-family: "montserrat" ,sans-serif;
- font-optical-sizing: auto;
- font-weight: 400;
- font-style: italic; 
+.montserrat-header {
+  text-align: center;
+  margin: 50px 0;
+  font-family: "montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
 }
-/*signup*/
 
 /*navBar*/
- .navbar{
-  width: max-content;
+.navbar {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 640px;
   padding: 15px;
   border-radius: 5px;
   margin: auto;
-  display: flex;
-  justify-content: space-evenly;
- }
- .navbar button{
-height: 20px !important;
-margin: auto;
 }
 
-.navbar ul{
-list-style: none;
-display: flex;
+.navbar ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: auto;
 }
-.navbar li{
+.navbar ul button {
+  border: none;
+  background-color: #422f8d;
+  color: white;
+}
+
+.navbar li {
   padding: 5px;
-  margin: 20px;
+  margin: 8px 12px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   background-color: transparent;
   border-radius: 5px;
   outline: #5940c1 solid 1px;
 
 }
 
-.nav-link{
+.nav-link {
   color: black;
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
 }
-.nav-link.active{
+
+.nav-link.active {
   background-color: transparent;
   border-radius: 5px;
   outline: #5940c1 solid 1px;
 
 }
 
-.tasks{
+@media (max-width: 768px) {
+  .navbar li {
+    margin: 6px 8px;
+  }
+
+  .nav-link,
+  .navbar ul button {
+    padding: 9px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 8px;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .navbar li {
+    margin: 4px 6px;
+  }
+
+  .nav-link,
+  .navbar ul button {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+.tasks {
   text-decoration: underline;
   background-color: #f5f6fd;
   font-style: oblique;
 }
+
 /*tasks*/
-.task-form{
+.task-form {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 720px;
+  padding: 0 16px;
   gap: 15px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin: auto;
   justify-content: center;
 }
-.update-form button{
+
+.task-form > * {
+  flex: 0 1 180px;
+  width: 100%;
+  max-width: 180px;
+}
+
+.task-form .MuiInput-root {
+  width: 100%;
+}
+
+.update-form button {
   background-color: #5940c1;
   color: white;
   border: none;
   border-radius: 5px;
   width: fit-content;
-  margin:20px auto !important;
+  margin: 20px auto !important;
 }
-.task-form input{
-  width: 25%;
-  height: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-.task-form button{
+
+.task-form button {
   background-color: #5940c1;
   color: white;
   border: none;
   padding: 10px;
   height: 25px;
-  margin-top: 30px;
+  align-self: center;
+  max-width: 180px;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .task-form {
+    gap: 12px;
+  }
+
+  .task-form > * {
+    flex: 0 1 160px;
+    max-width: 160px;
+  }
+
+  .task-form button {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .task-form {
+    gap: 10px;
+  }
+
+  .task-form > * {
+    flex: 0 1 100%;
+    max-width: 260px;
+  }
+
+  .task-form button {
+    max-width: 260px;
+  }
+}
+
 /*Login*/
-.winky-sans-login-header,.winky-snas-list-item{
-  font-family: "Winky sans",sans-serif;
+.winky-sans-login-header,
+.winky-snas-list-item {
+  font-family: "Winky sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
 }
-.login,.signup{
+
+.login,
+.signup {
   color: #251b5a;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 5px;
+   border-radius: 5px;
+ margin: 50px auto;
   width: 25%;
+  min-width: 280px;
   background-color: #dbdbf9;
   padding: 50px;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   height: 200px;
 }
-.loginForm,.signupForm{
+
+.loginForm,
+.signupForm {
   height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.tasks-container h2{
-margin-bottom: 10px;
-  text-align: center;
- font-family: "montserrat" ,sans-serif;
- font-optical-sizing: auto;
- font-weight: 400;
- font-style: italic; 
+
+.loginForm > *,
+.signupForm > * {
+  min-width: 200px;
 }
-.loginForm button,.signupForm button,ul button{
+
+.tasks-container h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.loginForm button,
+.signupForm button {
   background-color: #5940c1 !important;
   width: 50%;
   margin: 0 auto;
 }
-td button{
+
+td button {
   color: white;
   border: none;
   padding: 10px;
@@ -146,18 +245,25 @@ td button{
   width: 100px;
   height: 30px;
 }
-.editBTN{
+
+.editBTN {
   background-color: rgb(0, 124, 0) !important;
   margin-right: 10px !important;
 }
-.deleteBTN{
-background-color: rgb(177, 0, 0) !important;
+
+.deleteBTN {
+  background-color: rgb(177, 0, 0) !important;
 }
-.loginForm button:hover,.signupForm button:hover,ul button:hover,.task-form button:hover{
-background-color: #422f8d !important;
+
+.loginForm button:hover,
+.signupForm button:hover,
+ul button:hover,
+.task-form button:hover {
+  background-color: #422f8d !important;
 }
-table{
+
+table {
   border-radius: 5px;
-margin: 50px auto;
-  width: 80% !important; 
+  margin: 50px auto;
+  width: 80% !important;
 }

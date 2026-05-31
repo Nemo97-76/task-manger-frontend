@@ -37,9 +37,16 @@ const App = () => {
                 login
               </NavLink>
             </li>
-            <Button onClick={handleLogout} endDecorator={<LogoutRoundedIcon />}>
-              Logout
-            </Button>
+            <li >
+              <Button
+              endDecorator={<LogoutRoundedIcon />}
+                onClick={handleLogout}
+                className="nav-link winky-snas-list-item"
+              >
+                Logout 
+              </Button>
+            </li>
+
           </ul>
         </nav>
 
