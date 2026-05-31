@@ -194,7 +194,6 @@ const Tasks = () => {
         borderAxis="both"
         arial-label="basic table"
         hoverRow={true}
-        noWrap={false}
       >
         <thead>
           <tr>
@@ -207,7 +206,7 @@ const Tasks = () => {
           </tr>
         </thead>
 
-        <tbody>
+        <tbody className="tableBody">
           {tasks.length > 0 ? (
             tasks.map((task) => (
               <tr
@@ -218,16 +217,16 @@ const Tasks = () => {
                 }
                 key={task._id}
               >
-                <td data-label="title">{task.title}</td>
-                <td data-label="description">{task.description || "N/A"}</td>
-                <td data-label="completed">{!task.completed ? "false" : "true"}</td>
-                <td data-label="due date">
+                <td>{task.title}</td>
+                <td>{task.description || "N/A"}</td>
+                <td>{!task.completed ? "false" : "true"}</td>
+                <td>
                   {task.dueDate
                     ? new Date(task.dueDate).toLocaleDateString()
                     : "N/A"}
                 </td>
-                <td data-label="created At">{new Date(task.createdAt).toLocaleDateString()}</td>
-                <td data-label="actions">
+                <td>{new Date(task.createdAt).toLocaleDateString()}</td>
+                <td>
                   <Button
                     className="editBTN"
                     endDecorator={<EditRoundedIcon />}

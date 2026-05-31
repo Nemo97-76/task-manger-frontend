@@ -266,16 +266,17 @@ table,
 .tasks-table {
   border-radius: 5px;
   margin: 50px auto;
-  width: 80% !important;
+  width: 65% !important;
   table-layout: fixed;
   border-collapse: collapse;
 }
 
 .tasks-table th,
 .tasks-table td {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  width: fit-content;
+  word-wrap: none;
+  overflow-wrap: none;
+  word-break: normal;
   white-space: normal !important;
   overflow: visible !important;
   text-overflow: unset !important;
@@ -285,17 +286,17 @@ table,
 
 .tasks-table th:nth-child(1),
 .tasks-table td:nth-child(1) {
-  width: 14%;
+  width: 15%;
 }
 
 .tasks-table th:nth-child(2),
 .tasks-table td:nth-child(2) {
-  width: 28%;
+  width: 30%;
 }
 
 .tasks-table th:nth-child(3),
 .tasks-table td:nth-child(3) {
-  width: 10%;
+  width: 20%;
 }
 
 .tasks-table th:nth-child(4),
@@ -310,22 +311,26 @@ table,
   width: 20%;
 }
 
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .tasks-table {
     width: calc(100% - 32px) !important;
     margin: 24px 16px;
-  }
+}
+.tasks-table td button {
+  width: 110%;
+  margin: 4px 0 !important;
+}
 
-  .tasks-table thead {
-    display: none;
-  }
+
+}
+    /*
 
   .tasks-table tbody tr {
     display: block;
     margin-bottom: 16px;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border:1px solid #ccc;
+    border-top: none;
   }
 
   .tasks-table td {
@@ -367,12 +372,5 @@ table,
     content: none;
   }
 
-  .tasks-table td button {
-    width: 100%;
-    margin: 4px 0 !important;
-  }
-
-  .editBTN {
-    margin-right: 0 !important;
-  }
-}
+  
+} */
