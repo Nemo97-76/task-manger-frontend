@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/task-manger-frontend">
       <div className="app-container">
         <h1 className="montserrat-header">Task Manger</h1>
 
