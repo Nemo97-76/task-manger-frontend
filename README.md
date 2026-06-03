@@ -103,4 +103,5 @@ This frontend connects to the [Task Manager Backend](https://github.com/Nemo97-7
 for live preview <a href="https://task-manager-79.netlify.app" target="_blank">Demo</a>
 
 ## Contact
-- **Email**: tasneemyoussef61@gmail.com
+- **Email**: [tasneemyoussef61@gmail.com](mailto:tasneemyoussef61@gmail.com)
+- **LinkedIn**: <a href="https://www.linkedin.com/in/tasneem-youssef-react/" target="_blank">Link</a>
